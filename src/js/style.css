@@ -1,0 +1,253 @@
+body {
+  background: #C0C0C0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+h2 {
+  font-family: Tahoma;
+  font-size: 3.4em;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 0 rgba(255, 255, 255, 0.3);
+  padding: .5em;
+  box-sizing: border-box; }
+
+.info {
+  width: 45vw;
+  max-width: 600px;
+  font-size: 2em;
+  font-family: Tahoma;
+  margin: 0 auto;
+  text-align: center;
+  color: #8D8276; }
+
+section {
+  margin-bottom: 50px; }
+
+.calcAgain {
+  width: 150px;
+  height: 40px;
+  font-family: Tahoma;
+  color: #8D8276;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none; }
+  .calcAgain:hover {
+    font-size: 17px; }
+
+.binary-calculator, .dec-calculator, .hex-calculator {
+  display: block;
+  width: 850px;
+  height: 255px;
+  position: relative;
+  margin-top: 15vh;
+  left: -100px; }
+  .binary-calculator .group-number, .dec-calculator .group-number, .hex-calculator .group-number {
+    position: absolute; }
+  .binary-calculator .display-number,
+  .binary-calculator .result-bit, .dec-calculator .display-number,
+  .dec-calculator .result-bit, .hex-calculator .display-number,
+  .hex-calculator .result-bit {
+    display: block;
+    width: 85px;
+    height: 85px;
+    position: absolute;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: Arial;
+    font-size: 34px; }
+  .binary-calculator .display-number, .dec-calculator .display-number, .hex-calculator .display-number {
+    cursor: pointer;
+    background: #dadada;
+    border-radius: 10%; }
+    .binary-calculator .display-number:hover, .dec-calculator .display-number:hover, .hex-calculator .display-number:hover {
+      font-size: 42.5px; }
+  .binary-calculator .display-number__value--zero,
+  .binary-calculator .display-number__value--one, .dec-calculator .display-number__value--zero,
+  .dec-calculator .display-number__value--one, .hex-calculator .display-number__value--zero,
+  .hex-calculator .display-number__value--one {
+    display: block;
+    float: left;
+    width: 85px;
+    height: 85px;
+    text-align: center;
+    line-height: 85px; }
+  .binary-calculator .display-number__value--zero,
+  .binary-calculator .display-number__value--one, .dec-calculator .display-number__value--zero,
+  .dec-calculator .display-number__value--one, .hex-calculator .display-number__value--zero,
+  .hex-calculator .display-number__value--one {
+    color: #8D8276; }
+  .binary-calculator .result-bit .display-number__value--zero,
+  .binary-calculator .result-bit .display-number__value--one, .dec-calculator .result-bit .display-number__value--zero,
+  .dec-calculator .result-bit .display-number__value--one, .hex-calculator .result-bit .display-number__value--zero,
+  .hex-calculator .result-bit .display-number__value--one {
+    color: white; }
+  .binary-calculator .operator-bar, .dec-calculator .operator-bar, .hex-calculator .operator-bar {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: #545E6E;
+    top: 195px;
+    border-radius: 5px;
+    left: 4.4vw; }
+    .binary-calculator .operator-bar span, .dec-calculator .operator-bar span, .hex-calculator .operator-bar span {
+      font-size: 85px;
+      position: absolute;
+      top: -85px;
+      left: 25px;
+      font-family: Tahoma;
+      color: #545E6E;
+      cursor: pointer; }
+  .binary-calculator .group-number:nth-of-type(1), .dec-calculator .group-number:nth-of-type(1), .hex-calculator .group-number:nth-of-type(1) {
+    right: 0px; }
+    .binary-calculator .group-number:nth-of-type(1) .display-number:nth-of-type(1), .dec-calculator .group-number:nth-of-type(1) .display-number:nth-of-type(1), .hex-calculator .group-number:nth-of-type(1) .display-number:nth-of-type(1) {
+      top: 0; }
+    .binary-calculator .group-number:nth-of-type(1) .display-number:nth-of-type(2), .dec-calculator .group-number:nth-of-type(1) .display-number:nth-of-type(2), .hex-calculator .group-number:nth-of-type(1) .display-number:nth-of-type(2) {
+      top: 95px; }
+    .binary-calculator .group-number:nth-of-type(1) .result-bit, .dec-calculator .group-number:nth-of-type(1) .result-bit, .hex-calculator .group-number:nth-of-type(1) .result-bit {
+      top: 200px; }
+  .binary-calculator .group-number:nth-of-type(2), .dec-calculator .group-number:nth-of-type(2), .hex-calculator .group-number:nth-of-type(2) {
+    right: 95px; }
+    .binary-calculator .group-number:nth-of-type(2) .display-number:nth-of-type(1), .dec-calculator .group-number:nth-of-type(2) .display-number:nth-of-type(1), .hex-calculator .group-number:nth-of-type(2) .display-number:nth-of-type(1) {
+      top: 0; }
+    .binary-calculator .group-number:nth-of-type(2) .display-number:nth-of-type(2), .dec-calculator .group-number:nth-of-type(2) .display-number:nth-of-type(2), .hex-calculator .group-number:nth-of-type(2) .display-number:nth-of-type(2) {
+      top: 95px; }
+    .binary-calculator .group-number:nth-of-type(2) .result-bit, .dec-calculator .group-number:nth-of-type(2) .result-bit, .hex-calculator .group-number:nth-of-type(2) .result-bit {
+      top: 200px; }
+  .binary-calculator .group-number:nth-of-type(3), .dec-calculator .group-number:nth-of-type(3), .hex-calculator .group-number:nth-of-type(3) {
+    right: 190px; }
+    .binary-calculator .group-number:nth-of-type(3) .display-number:nth-of-type(1), .dec-calculator .group-number:nth-of-type(3) .display-number:nth-of-type(1), .hex-calculator .group-number:nth-of-type(3) .display-number:nth-of-type(1) {
+      top: 0; }
+    .binary-calculator .group-number:nth-of-type(3) .display-number:nth-of-type(2), .dec-calculator .group-number:nth-of-type(3) .display-number:nth-of-type(2), .hex-calculator .group-number:nth-of-type(3) .display-number:nth-of-type(2) {
+      top: 95px; }
+    .binary-calculator .group-number:nth-of-type(3) .result-bit, .dec-calculator .group-number:nth-of-type(3) .result-bit, .hex-calculator .group-number:nth-of-type(3) .result-bit {
+      top: 200px; }
+  .binary-calculator .group-number:nth-of-type(4), .dec-calculator .group-number:nth-of-type(4), .hex-calculator .group-number:nth-of-type(4) {
+    right: 285px; }
+    .binary-calculator .group-number:nth-of-type(4) .display-number:nth-of-type(1), .dec-calculator .group-number:nth-of-type(4) .display-number:nth-of-type(1), .hex-calculator .group-number:nth-of-type(4) .display-number:nth-of-type(1) {
+      top: 0; }
+    .binary-calculator .group-number:nth-of-type(4) .display-number:nth-of-type(2), .dec-calculator .group-number:nth-of-type(4) .display-number:nth-of-type(2), .hex-calculator .group-number:nth-of-type(4) .display-number:nth-of-type(2) {
+      top: 95px; }
+    .binary-calculator .group-number:nth-of-type(4) .result-bit, .dec-calculator .group-number:nth-of-type(4) .result-bit, .hex-calculator .group-number:nth-of-type(4) .result-bit {
+      top: 200px; }
+  .binary-calculator .group-number:nth-of-type(5), .dec-calculator .group-number:nth-of-type(5), .hex-calculator .group-number:nth-of-type(5) {
+    right: 380px; }
+    .binary-calculator .group-number:nth-of-type(5) .display-number:nth-of-type(1), .dec-calculator .group-number:nth-of-type(5) .display-number:nth-of-type(1), .hex-calculator .group-number:nth-of-type(5) .display-number:nth-of-type(1) {
+      top: 0; }
+    .binary-calculator .group-number:nth-of-type(5) .display-number:nth-of-type(2), .dec-calculator .group-number:nth-of-type(5) .display-number:nth-of-type(2), .hex-calculator .group-number:nth-of-type(5) .display-number:nth-of-type(2) {
+      top: 95px; }
+    .binary-calculator .group-number:nth-of-type(5) .result-bit, .dec-calculator .group-number:nth-of-type(5) .result-bit, .hex-calculator .group-number:nth-of-type(5) .result-bit {
+      top: 200px; }
+  .binary-calculator .group-number:nth-of-type(6), .dec-calculator .group-number:nth-of-type(6), .hex-calculator .group-number:nth-of-type(6) {
+    right: 475px; }
+    .binary-calculator .group-number:nth-of-type(6) .display-number:nth-of-type(1), .dec-calculator .group-number:nth-of-type(6) .display-number:nth-of-type(1), .hex-calculator .group-number:nth-of-type(6) .display-number:nth-of-type(1) {
+      top: 0; }
+    .binary-calculator .group-number:nth-of-type(6) .display-number:nth-of-type(2), .dec-calculator .group-number:nth-of-type(6) .display-number:nth-of-type(2), .hex-calculator .group-number:nth-of-type(6) .display-number:nth-of-type(2) {
+      top: 95px; }
+    .binary-calculator .group-number:nth-of-type(6) .result-bit, .dec-calculator .group-number:nth-of-type(6) .result-bit, .hex-calculator .group-number:nth-of-type(6) .result-bit {
+      top: 200px; }
+  .binary-calculator .group-number:nth-of-type(7), .dec-calculator .group-number:nth-of-type(7), .hex-calculator .group-number:nth-of-type(7) {
+    right: 570px; }
+    .binary-calculator .group-number:nth-of-type(7) .display-number:nth-of-type(1), .dec-calculator .group-number:nth-of-type(7) .display-number:nth-of-type(1), .hex-calculator .group-number:nth-of-type(7) .display-number:nth-of-type(1) {
+      top: 0; }
+    .binary-calculator .group-number:nth-of-type(7) .display-number:nth-of-type(2), .dec-calculator .group-number:nth-of-type(7) .display-number:nth-of-type(2), .hex-calculator .group-number:nth-of-type(7) .display-number:nth-of-type(2) {
+      top: 95px; }
+    .binary-calculator .group-number:nth-of-type(7) .result-bit, .dec-calculator .group-number:nth-of-type(7) .result-bit, .hex-calculator .group-number:nth-of-type(7) .result-bit {
+      top: 200px; }
+  .binary-calculator .group-number:nth-of-type(8), .dec-calculator .group-number:nth-of-type(8), .hex-calculator .group-number:nth-of-type(8) {
+    right: 665px; }
+    .binary-calculator .group-number:nth-of-type(8) .display-number:nth-of-type(1), .dec-calculator .group-number:nth-of-type(8) .display-number:nth-of-type(1), .hex-calculator .group-number:nth-of-type(8) .display-number:nth-of-type(1) {
+      top: 0; }
+    .binary-calculator .group-number:nth-of-type(8) .display-number:nth-of-type(2), .dec-calculator .group-number:nth-of-type(8) .display-number:nth-of-type(2), .hex-calculator .group-number:nth-of-type(8) .display-number:nth-of-type(2) {
+      top: 95px; }
+    .binary-calculator .group-number:nth-of-type(8) .result-bit, .dec-calculator .group-number:nth-of-type(8) .result-bit, .hex-calculator .group-number:nth-of-type(8) .result-bit {
+      top: 200px; }
+  .binary-calculator .group-number:nth-of-type(9), .dec-calculator .group-number:nth-of-type(9), .hex-calculator .group-number:nth-of-type(9) {
+    right: 760px; }
+    .binary-calculator .group-number:nth-of-type(9) .display-number:nth-of-type(1), .dec-calculator .group-number:nth-of-type(9) .display-number:nth-of-type(1), .hex-calculator .group-number:nth-of-type(9) .display-number:nth-of-type(1) {
+      top: 0; }
+    .binary-calculator .group-number:nth-of-type(9) .display-number:nth-of-type(2), .dec-calculator .group-number:nth-of-type(9) .display-number:nth-of-type(2), .hex-calculator .group-number:nth-of-type(9) .display-number:nth-of-type(2) {
+      top: 95px; }
+    .binary-calculator .group-number:nth-of-type(9) .result-bit, .dec-calculator .group-number:nth-of-type(9) .result-bit, .hex-calculator .group-number:nth-of-type(9) .result-bit {
+      top: 200px; }
+  .binary-calculator .group-number:nth-of-type(10), .dec-calculator .group-number:nth-of-type(10), .hex-calculator .group-number:nth-of-type(10) {
+    right: 855px; }
+    .binary-calculator .group-number:nth-of-type(10) .display-number:nth-of-type(1), .dec-calculator .group-number:nth-of-type(10) .display-number:nth-of-type(1), .hex-calculator .group-number:nth-of-type(10) .display-number:nth-of-type(1) {
+      top: 0; }
+    .binary-calculator .group-number:nth-of-type(10) .display-number:nth-of-type(2), .dec-calculator .group-number:nth-of-type(10) .display-number:nth-of-type(2), .hex-calculator .group-number:nth-of-type(10) .display-number:nth-of-type(2) {
+      top: 95px; }
+    .binary-calculator .group-number:nth-of-type(10) .result-bit, .dec-calculator .group-number:nth-of-type(10) .result-bit, .hex-calculator .group-number:nth-of-type(10) .result-bit {
+      top: 200px; }
+  .binary-calculator .group-number:nth-of-type(11), .dec-calculator .group-number:nth-of-type(11), .hex-calculator .group-number:nth-of-type(11) {
+    right: 950px; }
+    .binary-calculator .group-number:nth-of-type(11) .display-number:nth-of-type(1), .dec-calculator .group-number:nth-of-type(11) .display-number:nth-of-type(1), .hex-calculator .group-number:nth-of-type(11) .display-number:nth-of-type(1) {
+      top: 0; }
+    .binary-calculator .group-number:nth-of-type(11) .display-number:nth-of-type(2), .dec-calculator .group-number:nth-of-type(11) .display-number:nth-of-type(2), .hex-calculator .group-number:nth-of-type(11) .display-number:nth-of-type(2) {
+      top: 95px; }
+    .binary-calculator .group-number:nth-of-type(11) .result-bit, .dec-calculator .group-number:nth-of-type(11) .result-bit, .hex-calculator .group-number:nth-of-type(11) .result-bit {
+      top: 200px; }
+  .binary-calculator .display-17,
+  .binary-calculator .display-18, .dec-calculator .display-17,
+  .dec-calculator .display-18, .hex-calculator .display-17,
+  .hex-calculator .display-18 {
+    visibility: hidden; }
+  .binary-calculator .result-9, .dec-calculator .result-9, .hex-calculator .result-9 {
+    border-bottom: 5px solid #dadada; }
+    .binary-calculator .result-9:after, .dec-calculator .result-9:after, .hex-calculator .result-9:after {
+      content: 'carry';
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      text-align: center;
+      font-size: .5em;
+      font-family: Tahoma;
+      width: 100%;
+      color: white; }
+
+.tooltip {
+  display: none; }
+
+.hex-calculator .operator-bar {
+  top: 155px; }
+
+.tooltip {
+  background: lightslategrey;
+  border: 2px solid #666666;
+  font-size: 20px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  width: 158px;
+  top: -111px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0px 0px 5px #aaa;
+  -webkit-box-shadow: 0px 0px 5px #aaa;
+  box-shadow: 0px 0px 5px #aaa; }
+
+.chatBubbleArrow {
+  border-color: lightslategrey transparent transparent transparent;
+  border-style: solid;
+  border-width: 10px;
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  bottom: -19px;
+  left: 30px; }
+
+.chatBubbleArrowBorder {
+  border-color: #666666 transparent transparent transparent;
+  border-style: solid;
+  border-width: 10px;
+  height: 0;
+  width: 0;
+  position: absolute;
+  bottom: -22px;
+  left: 30px; }
+
+/*# sourceMappingURL=style.css.map */
