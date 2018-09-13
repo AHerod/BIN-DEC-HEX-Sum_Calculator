@@ -1,5 +1,5 @@
 
-## About :1234::heavy_plus_sign:
+## About :1234:
 
 This app includes 3 long addition calculators for following numeral systems:
 - BINARY
