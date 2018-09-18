@@ -14,8 +14,6 @@ $text-color: #8D8276;
 $interface: #545E6E;
 $highlight: white;
 
-
-
 body {
 	background: $background;
 	display: flex;
@@ -47,11 +45,11 @@ section {
 	margin-bottom:50px;
 }
 .calcAgain{
-	width: 150px;
-	height: 40px;
+	width: 200px;
+	height: 80px;
 	font-family: $font-text;
 	color: $text-color;
-	font-size: 14px;
+	font-size: 20px;
 	font-weight: bold;
 	border-radius: 10px;
 	border: none;
@@ -63,7 +61,7 @@ section {
 
 .binary-calculator, .dec-calculator, .hex-calculator{
 	display: block;
-	width: $columns * ($block-size + $gutter) - 100px;
+	width: $columns * ($block-size + $gutter) - 50px;
 	height: $rows * $block-size;
 	position: relative;
 	margin-top: 15vh;
@@ -185,7 +183,7 @@ section {
 	display: none;
 }
 .hex-calculator{
-	.operator-bar {top: 155px}
+	.operator-bar {top: 115px}
 }
 .tooltip{
   background: lightslategrey;
