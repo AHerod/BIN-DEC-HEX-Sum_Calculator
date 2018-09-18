@@ -1,5 +1,5 @@
 
-## About :1234:
+## About :1234::heavy_plus_sign:
 
 This app includes 3 long addition calculators for following numeral systems:
 - BINARY
@@ -7,15 +7,15 @@ This app includes 3 long addition calculators for following numeral systems:
 - HEXADECIMAL
 
 ## Installation
-``` 
+
+```
 npm init
+npm install
 npm run start
 ```
-   
- ## Built with
+## Built with
 
 - ES6
 - SASS
 - HTML5
 - WEBPACK
-
